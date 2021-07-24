@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hotel Review Sentiment Analysis</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+
+	<div class="w3-center w3-padding-16 w3-red w3-xxlarge">
+		Hotel Review Sentiment Analysis
+	</div>
+
+	<div class="results w3-center w3-bold w3-panel">
+
+	
+	{% if prediction == 1%}
+	<h2 class="w3-text-green"><b>ITS A POSITIVE REVIEW</b></h2>
+	{% elif prediction == 0%}
+	<h2 class="w3-text-red"><b>ITS A NEGATIVE REVIEW</b></h2>
+	{% endif %}
+
+	</div>
+
+</body>
+</html>
